@@ -1,0 +1,36 @@
+body {
+	font-family: 'Raleway', sans-serif;
+	font-weight: 200;
+	background: url(http://365psd.com/images/previews/e55/5-blurred-backgrounds-image-2013Part-2-Background-16-without-Glare.jpg);
+	background-size: cover;
+}
+h1 {
+	font-weight: 200!important;
+	text-align: center;
+}
+.container ul {
+	padding: 0;
+	  border: 1px solid #ccc;
+  border-radius: 11px;
+  background-color: #fff;
+  opacity: 0.8;
+}
+.container ul li {
+	list-style-type: none!important;
+}
+.container ul li span, .container ul li div {
+	display: inline-block;
+	padding: 5px 10px;
+}
+.container ul li div {
+	min-width: 80%;
+}
+.container #form-container, .container #list-container li {
+	padding: 5px 10px;
+}
+.container .item.completed {
+	opacity: .25;
+	-webkit-box-shadow: inset 0px 2px 9px -2px rgba(0,0,0,0.57);
+	-moz-box-shadow: inset 0px 2px 9px -2px rgba(0,0,0,0.57);
+	box-shadow: inset 0px 2px 9px -2px rgba(0,0,0,0.57);
+}

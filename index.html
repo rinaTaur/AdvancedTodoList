@@ -1,6 +1,9 @@
 <head>
-  <link rel="stylesheet" type="text/css" href="styles.css">
+ <!-- <link rel="stylesheet" type="text/css" href="styles.css"> -->
+ <link rel="stylesheet" type="text/css" href="rina.css">
+ <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
   <link href='https://fonts.googleapis.com/css?family=Titillium+Web:600' rel='stylesheet' type='text/css'>
+  <link href='http://fonts.googleapis.com/css?family=Raleway' rel='stylesheet' type='text/css'>
   <script src="vendor/console-polyfill.js"></script>
   <script src="vendor/es5-shim.min.js"></script>
   <script src="vendor/es5-sham.min.js"></script>
@@ -11,11 +14,13 @@
 </head>
 
 <body>
-  <div id="container">
-    <h1>Your List App</h1>
-    <div id="app">
-      <div id='form-container'></div>
-      <div id='list-container'></div>
+  <div id="container" class="container">
+    <div class="row">
+      <div id="app" class="col-sm-6">
+        <h1>Rinataur's List App</h1>
+        <div id='form-container'></div>
+        <div id='list-container'></div>
+      </div>
     </div>
   </div>
 
@@ -24,7 +29,7 @@
       render: function() {
         return (
           <form id="add-form" onSubmit={this.handleSubmit}>
-            <input id='create' ref="description" type='text' placeholder='Add Something to the list!' />
+            <input id='create' ref="description" type='text' className="form-control" placeholder='Add Something to the list!' />
           </form>
         )
       },
@@ -43,9 +48,9 @@
         var itemClass = this.props.completed ? 'item completed' : 'item' // toggling between item and item completed
         return (
           <li className={itemClass}>
-            <span className='complete-button' onClick={this.handleComplete}>{'\u2714'}</span>
+            <span className='complete-button btn btn-success' onClick={this.handleComplete}>{'\u2714'}</span>
             <div className='description'>{this.props.description}</div>
-            <span className='delete-button' onClick={this.handleDelete}>{'\u2718'}</span>
+            <span className='delete-button btn btn-danger pull-right' onClick={this.handleDelete}>{'\u2718'}</span>
           </li>
         )
       },
