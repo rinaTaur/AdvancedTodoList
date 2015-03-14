@@ -45,7 +45,7 @@
           <li className={itemClass}>
             <span className='complete-button' onClick={this.handleComplete}>{'\u2714'}</span>
             <div className='description'>{this.props.description}</div>
-            <span className='delete-button'>{'\u2718'}</span>
+            <span className='delete-button' onClick={this.handleDelete}>{'\u2718'}</span>
           </li>
         )
       },
@@ -53,6 +53,10 @@
       handleComplete: function() {
         // alert('trying to complete item with ID of ' + this.props.id)
         ListStore.toggleCompleteness(this.props.id)
+      }
+
+      handleDelete: function() {
+        alert('deleting' + this.props.id)
       }
     })
 
