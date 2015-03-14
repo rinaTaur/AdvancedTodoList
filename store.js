@@ -45,17 +45,7 @@ ListStore = {
       notifyComponents()
     })
   },
-  removeItem: function() {
-    var itemDestroy = $.ajax({
-      type: 'DELETE',
-      url: "http://listalous.herokuapp.com/lists/rinataur/items",
-      data: { description: itemDescription, completed: false }
-    })
-
-    itemDestroy.done(function(itemDataDeleted) {
-      notifyComponents()
-    })
-  }
+  
   toggleCompleteness: function(itemId) {
     var item = findItemById(itemId)
     var currentCompletedValue = item.completed
