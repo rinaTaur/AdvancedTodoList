@@ -56,7 +56,8 @@
       },
 
       handleDelete: function() {
-        alert('deleting ' + this.props.description)
+        // alert('deleting ' + this.props.description)
+        ListStore.removeItem(this.props.id)
       }
     })
 

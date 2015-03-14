@@ -45,6 +45,26 @@ ListStore = {
       notifyComponents()
     })
   },
+  // RINA'S CODE
+  removeItem: function(itemId) {
+    var item = findItemById(itemId)
+
+    var itemDestroy = $.ajax({
+      type: 'DELETE',
+      url: "http://listalous.herokuapp.com/lists/rinataur/items/" + itemId,
+      data: {  } // you don't need anything within data when you're deleting
+    })
+
+    itemDestroy.done(function(itemDataDeleted) {
+      //items.push(itemDataDeleted) // use "splice" to remove from local, push creates more than one instead of deletes
+      items.forEach(function(item,i) {
+        if (item.id == itemDataDeleted.id) // id here is the object items, looping through the array
+          items.splice(i,1) // splice at this index in the iteration (i)  
+      })
+      notifyComponents()
+    })
+  },
+  // --- END RINA'S CODE
   toggleCompleteness: function(itemId) {
     var item = findItemById(itemId)
     var currentCompletedValue = item.completed
