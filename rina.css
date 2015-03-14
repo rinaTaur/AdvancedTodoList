@@ -8,6 +8,11 @@ h1 {
 	font-weight: 200!important;
 	text-align: center;
 }
+input {
+  font-size: 20px;
+  line-height: 30px;
+  height: auto;
+}
 .container ul {
 	padding: 0;
 	  border: 1px solid #ccc;
@@ -24,6 +29,7 @@ h1 {
 }
 .container ul li div {
 	min-width: 80%;
+	font-size: 20px;
 }
 .container #form-container, .container #list-container li {
 	padding: 5px 10px;
