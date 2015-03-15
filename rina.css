@@ -23,13 +23,16 @@ input {
 .container ul li {
 	list-style-type: none!important;
 }
-.container ul li span, .container ul li div {
+.container ul li span {
 	display: inline-block;
 	padding: 5px 10px;
+	border-radius: 50%;
 }
 .container ul li div {
 	min-width:  70%;
   font-size: 15px;
+  display: inline-block;
+	padding: 5px 10px;
 }
 .container #form-container, .container #list-container li {
 	padding: 5px 10px;
