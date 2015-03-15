@@ -25,8 +25,15 @@ input {
 }
 .container ul li span {
 	display: inline-block;
-	padding: 5px 10px;
+	padding: 15px;
 	border-radius: 50%;
+	vertical-align: middle;
+}
+.container .complete-button {
+	background-color: #7ADB7E;
+}
+.container .delete-button {
+	background-color: #EE8690;
 }
 .container ul li div {
 	min-width:  70%;
