@@ -54,9 +54,9 @@
         var itemClass = this.props.completed ? 'item completed' : 'item' // toggling between item and item completed
         return (
           <li className={itemClass}>
-            <span className='complete-button btn btn-success' onClick={this.handleComplete}>{'\u2714'}</span>
+            <span className='complete-button btn btn-success' onClick={this.handleComplete}></span>
             <div className='description'>{this.props.description}</div>
-            <span className='delete-button btn btn-danger pull-right' onClick={this.handleDelete}>{'\u2718'}</span>
+            <span className='delete-button btn btn-danger pull-right' onClick={this.handleDelete}></span>
           </li>
         )
       },
